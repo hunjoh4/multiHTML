@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* 공통 스타일 */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+body{
+  margin: 0;    
+}
+
+/* 레이아웃 */
+.container{
+  background: slateblue;
+  /* display: flex;
+  flex-direction: column; */
+  /* flex-flow: column wrap; */
+  /* flex-wrap: wrap;
+  justify-content: center; */
+}
+.header, .visual, .main, .slogan, .footer{
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header{
+  background: yellow;
+  height: 10vh;
+ 
+}
+.visual{
+  background: gray;
+  height: 10vh;
+}
+.main{
+  background: orangered;
+  padding: 30 30px;
+  /* overflow: hidden; */
+  min-height: 400px;
+  /* display:flex;
+  justify-content: space-between; */
+}
+
+.group{
+  margin: 0 15px;
+  float: left;
+}
+.group1{
+  background: pink;
+  width: 250px;
+  
+}
+.group2{
+  /* clear: both; */
+  background: skyblue;
+
+  width: 380px;
+  /* order: -1; */
+}
+.group3{
+  background: lime;
+  width: 190px;
+}
+.slogan{
+  background: purple;
+  height: 10vh;
+}
+.footer-bg{
+  background: silver;
+  /* flex-basis: 100%;
+  display: flex;
+  justify-content: center; */
+}
+.footer{
+  background: yellow;
+  height: 10vh;
+}
+
