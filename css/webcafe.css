@@ -1,20 +1,50 @@
 @charset "utf-8";
-/* 공통 스타일 */
-*, *::before, *::after{
-  box-sizing: border-box;
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url("./normalize.css");
+@import url("./reset.css");
+/* 숨김 콘텐츠 */
+.a11y-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  clip-path: inset(0,0);
 }
+/* 플로트 이슈를 해결하기 위한 css 선언 */
 .clearfix::after{
   content: "";
   display: block;
   clear: both;
 }
+/* 링크 스타일 */
+a{
+  color: inherit;
+  text-decoration: none;
+}
+a:hover, a:focus{
+  color: #f00;
+}
+
+/* 공통 스타일 */
+*, *::before, *::after{
+  box-sizing: border-box;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+}
+html{
+  font-size: 10px;
+}
 body{
-  margin: 0;    
+  margin: 0;
+  font-weight: 400;
+  color : #181818;
+  font-size: 1.4rem;
 }
 
 /* 레이아웃 */
 .container{
-  background: slateblue;
+  background: url(./images/bg_flower.png) no-repeat 50% 0, linear-gradient(to bottom, #999 0%, #ccc 40%, #eee 60%, #fff 100%);
   /* display: flex;
   flex-direction: column; */
   /* flex-flow: column wrap; */
@@ -26,18 +56,64 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
-.header{
-  background: yellow;
-  height: 10vh;
- 
+.header, .visual, .main, .slogan{
+  align-self: center;
 }
+/* 헤더 */
+.header{
+  background: #fff;
+  position: relative;
+  padding:0 30px;
+  border-radius: 0 0 15px 15px;
+}
+/* 로고 */
+.logo{
+  /* background: teal; */
+  position: absolute;
+  top: 47px;
+  left: 65px;
+}
+/* 멤버 링크 모음 */
+.member{
+  padding:2px 0;
+  text-align: right;
+  font-size: 0px;
+  margin-right: -10px;
+}
+.member li, .member a{
+  display:inline-block;
+}
+.member li{
+  font-size: 1.4rem;
+}
+.bar::before{
+  content: ":";
+}
+.member a{
+  padding: 8px 10px;
+  text-transform: uppercase;
+}
+/* 메인 메뉴 */
+.navigation{
+  padding-bottom: 50px;
+}
+.menu{
+  color: #181818;
+  /* background-color: orange;
+  background-image: linear-gradient(to bottom, red,green); */
+  background: #e2622b linear-gradient(to bottom, #e29a2d 0%, #e2622b 30%, #e2622b 70%, #e29a2d 100% );
+  height: 47px;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 -2px 0 0 #181818;
+  /* border-top: 2px solid #181818; */
+}
+
 .visual{
-  background: gray;
-  height: 10vh;
+  height: 120px;
 }
 .main{
   background: orangered;
-  padding: 30 30px;
+  padding: 30px 0px;
   /* overflow: hidden; */
   min-height: 400px;
   /* display:flex;
