@@ -106,6 +106,30 @@ body{
   border-radius: 0 0 5px 5px;
   box-shadow: 0 -2px 0 0 #181818;
   /* border-top: 2px solid #181818; */
+  padding-left: 230px;
+}
+.menu-item{
+  float: left;
+  line-height: 47px;
+  border-left: 2px solid rgba(255,255,255,0.85);
+  padding: 0 17px;
+}
+.menu-item-text{
+  line-height: 47px;
+  display: block;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #fff;
+  text-shadow: 1px 0 0 #181818, 0 1px 0 #181818, -1px 0 0 #181818, 0 -1px 0 #181818;
+}
+.menu-act .menu-item-text{
+ color : #ff0;
+ border-bottom:2px solid #181818;
+}
+.sub-menu{
+background: pink;
+position: absolute;
+display: none;
 }
 
 .visual{
