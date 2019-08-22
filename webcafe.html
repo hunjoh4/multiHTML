@@ -14,10 +14,10 @@
       <h1 class="logo"><a href="index.html"><img src="./images/logo.png" alt="Web Cafe"></a></h1>
       <ul class="member">
         <li><a href="#">홈</a></li>
-        <li><span class="bar" aira-hidden="true"></span><a href="#">로그인</a></li>
-        <li><span class="bar" aira-hidden="true"></span><a href="#">회원가입</a></li>
-        <li><span class="bar" aira-hidden="true"></span><a href="#">사이트맵</a></li>
-        <li><span class="bar" aira-hidden="true"></span><a href="#">english</a></li>
+        <li><span class="bar" aria-hidden="true"></span><a href="#">로그인</a></li>
+        <li><span class="bar" aria-hidden="true"></span><a href="#">회원가입</a></li>
+        <li><span class="bar" aria-hidden="true"></span><a href="#">사이트맵</a></li>
+        <li><span class="bar" aria-hidden="true"></span><a href="#">english</a></li>
       </ul>
       <nav class="navigation">
         <h2 class="a11y-hidden">메인 메뉴</h2>
@@ -104,8 +104,136 @@
             </li>
           </ul>
         </section>
+        <section class="validation">
+            <h2 class="a11y-hidden">유효성 검사 배너</h2>
+            <ul>
+              <li>
+                <a href="https://validator.w3.org/" target="_blank" title="마크업 유효성 검사 사이트로 이동(새창)">
+                  W3C Markup Validation
+                </a>
+              </li>
+              <li>
+                <a href="https://jigsaw.w3.org/css-validator/" target="_blank" title="CSS 유효성 검사 사이트로 이동(새창)">
+                  CSS Validation Service
+                </a>
+              </li>
+            </ul>
+        </section>
+        <section class="term">
+          <h2 class="term-heading">웹 관련 용어</h2>
+          <dl class="term-list">
+            <div class="odd clearfix">
+              <dt class="term-list-subject">
+                <a href="#">웹표준 이란?</a>
+              </dt>
+              <dd class="term-list-thumbnail">
+                <img src="./images/web_standards.gif" alt="">
+              </dd>
+              <dd class="term-list-brief">
+                W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...
+              </dd>
+            </div>
+            <div class="even clearfix">
+              <dt class="term-list-subject">
+                <a href="#">웹표준 이란?</a>
+              </dt>
+              <dd class="term-list-thumbnail">
+                <img src="./images/web_standards.gif" alt="">
+              </dd>
+              <dd class="term-list-brief">
+                W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...
+              </dd>
+            </div>
+
+          </dl>
+        </section>
       </div>
-      <div class="group group2">그룹2</div>
+      <div class="group group2">
+        <section class="search">
+          <h2 class="a11y-hidden">검색</h2>
+          <form method="POST" action="https://formspree.io/hunjoh@koreanair.com" class="search-form">
+            <fieldset>
+              <legend>검색 폼</legend>
+                <label for="search" class="icon-search">자료검색</label>
+                <input type="search" id="search" name="search" placeholder="검색어를 입력하세요." required>
+                <button type="submit" class="btn-search">검색</button>
+              </fieldset>
+          </form>
+        </section>
+        <div class="board">
+            <section class="notice tab-act">
+              <h2 class="tab notice-heading" id="notice-heading">공지사항</h2>
+              <ul class="notice-list">
+                <li>
+                  <a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a>
+                  <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+                </li>
+                <li>
+                  <a href="#">W3C 사이트 리뉴얼 및 공지사항</a>
+                  <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+                </li>
+                <li>
+                  <a href="#">KWCAG 2.1 소식</a>
+                  <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+                </li>
+                <li>
+                  <a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+                  <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+                </li>
+                <li>
+                  <a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+                  <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+                </li>
+              </ul>
+              <a href="#" class="icon-plus notice-more" title="공지사항" aria-labelledby="notice-heading">더보기</a>
+            </section>
+            <section class="pds">
+              <h2 class="tab pds-heading" id="pds-heading">자료실</h2>
+              <ul class="pds-list">
+                <li>
+                  <a href="#">디자인 사이트 링크 모음</a>
+                  <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+                </li>
+                <li>
+                  <a href="#">웹 접근성 관련 자료 모음</a>
+                  <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+                </li>
+                <li>
+                  <a href="#">예제 샘플 응용해보기</a>
+                  <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+                </li>
+                <li>
+                  <a href="#">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a>
+                  <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+                </li>
+                <li>
+                  <a href="#">로얄티 프리 이미지 자료</a>
+                  <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+                </li>
+              </ul>
+              <a href="#" class="icon-plus pds-more" title="자료실" aria-labelledby="pds-heading">더보기</a>
+            </section>
+          </div>
+          <section class="news">
+              <h2 class="news-heading">새소식</h2>
+                <a href="#" class="news-link">
+                  <article class="news-item">
+                    <h3 class="news-subject">W3c 사이트가 리뉴얼 되었습니다.</h3>
+                    <time class="news-date" datetime="2019-08-22T17:02:19">2019.08.22</time>
+                    <p class="news-brief">
+                        디자인 및 다양한 view 환경을 고려하여 구성되어 있으며, 
+                        기존보다 최신 정보 및 개발자를 위한 기술 가이드도 
+                        찾기 쉽도록 구성되어 있습니다. 
+                    </p>
+                    <figure class="news-thumbnail">
+                      <img src="./images/news.gif" alt="" aria-labelledby="caption">
+                      <figcaption id="caption">W3C 리뉴얼</figcaption>
+                    </figure>
+                  </article>
+                </a>
+                <a href="#" class="news-more icon-plus" title="새소식">더보기</a>
+            </section>
+      </div>
       <div class="group group3">그룹3</div>
     </main>
     <article class="slogan">슬로건</article>
