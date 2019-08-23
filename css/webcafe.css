@@ -452,17 +452,372 @@ body{
 .tab-act ul, .tab-act [class$="more"]{
   display:block;
 }
-.slogan{
-  background: purple;
-  height: 10vh;
+/* 새소식 */
+/* 오헌준 *//*position:absolute  되는순간 인라인에서 블락으로 속성이 변경 된다*/
+/* .news{
+  background: yellow;
+  margin-top: 20px;
+  position: relative;
 }
-.footer-bg{
-  background: silver;
-  /* flex-basis: 100%;
+.news-heading{
+  background:lime;
+}
+.news-link{
+  background:pink;
+  display:block;
+}
+.news-more{
+  background: orange;
+  position:absolute; 
+  top: 0;
+  right: 0;
+}
+.news-item{
+  background: skyblue;
+}
+.news-subject{
+  background: tomato;
+  float:right;
+  width: 200px;
+}
+.news-date{
+  background: teal;
+  float:right;
+  width: 200px;
+}
+.news-brief{
+  background: hotpink;
+  float:right;
+  width: 200px;
+}
+.news-thumbnail{
+  background: olive;
+  float:left;
+} */
+
+
+/* 새소식 */
+/* 강사님 *//*position:absolute  되는순간 인라인에서 블락으로 속성이 변경 된다*/
+[class*="more"]::before{
+  color: hsla(110, 50%, 50%, 1)
+}
+.news{
+  margin-top: 20px;
+  position: relative;
+}
+.news::before{
+  content: "";
+  background: linear-gradient(to right, #ccc, #fff);
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  top: 35px;
+  left: 0;
+}
+.news-heading{
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #e2622b;
+}
+.news-link{
+  display:block;
+}
+.news-more{
+  position:absolute; 
+  top: 0;
+  right: 0;
+}
+.news-item{
+  margin-top: 35px;
+  padding-left: 130px;
+  position: relative;
+  min-height: 130px;
+}
+.news-subject{
+  font-weight: 700;
+}
+.news-date{
+  display: block;
+  margin: 10px 0;
+}
+.news-brief{
+  line-height: 1.5;
+}
+.news-thumbnail{
+  position: absolute;
+  top: 4px;
+  left: 0;
+  text-align: center;
+}
+.news-thumbnail img{
+  margin-bottom: 15px;
+  box-shadow: 0 15px 15px 5px rgba(0,0,0,0.5);
+}
+/* 신규이벤트 및 관련사이트*/
+.event-related{
+  background: #ccc linear-gradient(#ccc, #eee);
+  border:1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+}
+.event{
+  position: relative;
+}
+.related{
+  margin-top: 10px;
+  border-top: 1px solid #aaa;
+  padding-top: 10px;
+}
+.event-heading, .related-heading, .favorite-heading{
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.event-heading span, .related-heading span, .favorite-heading span{
+  color: #e2622b;
+}
+.event-thumbnail, .event-brief{
+  margin-top: 10px;
+}
+.event-thumbnail img{
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #999;
+}
+.btn-event{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.btn-event-prev, .btn-event-next{
+  width: 19px;
+  height: 18px;
+  border: 0;
+  padding: 0;
+  background: url("./images/back_forward.png");
+}
+.btn-event-next{
+  background-position: -36px;
+}
+.related-list
+{
+  background: #fff;
+  margin-top:10px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  height: 27px;
+  overflow: hidden;
+  transition-property: all;
+  transition-duration: 0.4s;
+}
+.related-list:hover, .related-list:focus{
+  height: 147px;
+  padding: 10px 0;
+}
+.related-list li{
+  line-height: 25px;
+  text-indent: 2em; /*첫줄 들여쓰기*/
+}
+.related-list a{
+  display:block;
+}
+/* 인기 사이트 */
+/* 오헌준 */
+/* .favorite{
+  background: #ccc linear-gradient(#ccc, #eee);
+  border:1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+}
+.favorite-more{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.favorite-list{
+  background: yellow;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.favorite-list li::before{
+  background: orangered;
+  content: 'no';
+  width: 1em;
+}
+.favorite-list li a, .favorite-list li em{
+  background: teal;
+}
+.favorite-list li{
+  display:flex;
+}
+.favorite-list em{
+  margin-left: auto;
+}
+.favorite-list li a
+{
+  background: yellow;
+  text-align: left;
+}
+.up{
+  background: url("./images/rank.png") no-repeat;
+} */
+
+/* 인기 사이트 */
+/* 강사님 */
+.favorite{
+  background: #ccc linear-gradient(#ccc, #eee);
+  border:1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+}
+.favorite-more{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.favorite-list{
+  margin-top: 5px;
+  overflow: hidden;
+}
+.favorite-list li{
+  margin-top: 5px;
+  counter-increment: number;
   display: flex;
-  justify-content: center; */
+  align-items: center;
+}
+.favorite-list li::before{
+  content: counter(number);
+  color: #fff;
+  background: #aaa;
+  border-radius: 3px;
+  padding: 0 5px;
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+.favorite-list em{
+  margin-left: auto;
+  background-image: url("./images/rank.png");
+  background-repeat: no-repeat;
+  width: 9px;
+  height: 11px;
+  padding-top: 11px;
+  overflow: hidden;
+}
+.stop{
+  background-position: 0 50%;
+}
+.down{
+  background-position: 0 100%;
+}
+
+/* 슬로건 */
+.slogan{
+  position: relative;
+  padding: 10px 100px 10px 180px;
+}
+.slogan-heading{
+  width: 110px;
+  height:83px;  
+  position: absolute;
+  bottom:-25px;
+  left: 50px;
+  text-align: center;
+  line-height: 83px;
+}
+.slogan-heading::after{
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/coffee.png") no-repeat;
+}
+.slogan-content{
+  color: #a09784;
+}
+.slogan-content q::before{
+  font-size: 3.5rem;
+  position: relative;
+  top: 12px;
+}
+.slogan-content q::after{
+  content: "";
+}
+
+/* 푸터 */
+/* 오헌준 */
+/* .footer-bg{
+  background: #ccc linear-gradient(to bottom, #999 0%, #ccc 40%, #eee 60%, #fff 100%)
 }
 .footer{
-  background: yellow;
-  height: 10vh;
+ background: yellow;
+ position: relative; 
+}
+.footer-logo{
+  background: pink;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.guide-list{
+  background: #7b8385;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left : 180px;
+  display:flex;
+  justify-content: space-between;
+}
+.address{
+  background:teal;
+}
+.copyright{
+  background: burlywood;
+}
+.badge{
+  background: orange;
+  position: absolute;
+  top: 10px;
+  right: 0;
+} */
+
+/* 푸터 */
+.footer-bg{
+  background: #ccc linear-gradient(to bottom, #999 0%, #ccc 40%, #eee 60%, #fff 100%)
+}
+.footer{
+  position: relative;
+  padding: 15px 100px 10px 180px;
+}
+.footer-logo{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.guide-list{
+  background: #7b8385;
+  color: #fff;
+  display:flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  padding: 2px 15px;
+}
+.guide-list a{
+  display:block;
+  padding: 8px 0;
+  text-transform: uppercase;
+}
+.address, .copyright{
+  display: block;
+  margin: 3px 0;
+}
+.badge{
+  background: #ccc;
+  position: absolute;
+  top: 15px;
+  right: 0;
 }
